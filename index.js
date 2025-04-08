@@ -31,3 +31,68 @@ function defUpperStr (str){
 console.log(defUpperStr('My text'));
 console.log(defUpperStr());
 
+//#4
+function evenFn (n) {
+	const result = [];
+	for (let i = 1; i <= n; i++) {
+		if(i % 2 === 0) {
+			result.push(i);
+		}
+	}
+	return result;
+}
+console.log(evenFn(10));
+console.log(evenFn(15));
+console.log(evenFn(20));
+
+//#5
+function weekFn(n){
+	switch (n){
+		case 1: return 'Mondey';
+		case 2: return 'Tuesday';
+		case 3: return 'Wednesday';
+		case 4: return 'Thursday';
+		case 5: return 'Friday';
+		case 6: return 'Saturday';
+		case 7: return 'Sunday';
+		default: return null;
+	}
+
+}
+console.log(weekFn(2))
+console.log(weekFn(10))
+console.log(weekFn(1.5))
+
+//#6
+function ageClassification(n){
+	return n < 0 || n > 122 || typeof n !== 'number'
+	? null
+	: n < 24 ? 'Дитинство'
+	: n < 44 ? 'Молодість'
+	: n < 65 ? 'Зрілість'
+	: n < 75 ? 'Старість'
+	: n < 90 ? 'Довголіття'
+	: 'Рекорд'
+}
+console.log(ageClassification(22))
+console.log(ageClassification(32))
+console.log(ageClassification(47))
+console.log(ageClassification(121))
+console.log(ageClassification(130))
+console.log(ageClassification(-1))
+
+//#7
+function oddFn(n) {
+	const result = [];
+	let i = 1;
+	while (i <= n) {
+		if( i % 2 !== 0) {
+			result.push(i);
+		}
+		i++;
+	}
+	return result;
+}
+console.log(oddFn(10))
+console.log(oddFn(15))
+console.log(oddFn(20))
