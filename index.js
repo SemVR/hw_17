@@ -96,3 +96,26 @@ function oddFn(n) {
 console.log(oddFn(10))
 console.log(oddFn(15))
 console.log(oddFn(20))
+
+//#8 
+function mainFunc(a, b, callback){
+	if(typeof callback !== 'function') {
+		return false;
+	}
+	return callback(a, b);
+}
+
+function cbRandom(min, max) {
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+function cbPow(num, pow){
+	return Math.pow(num, pow);
+}
+function cbAdd(a, b){
+	return a + b;
+}
+
+console.log(mainFunc(2, 10, cbRandom)) 
+console.log(mainFunc(2, 2, cbPow)) 
+console.log(mainFunc(1, 5, cbAdd)) 
+console.log(mainFunc(2, 5, 'not a func'))
