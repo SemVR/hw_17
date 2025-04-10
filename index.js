@@ -1,28 +1,15 @@
-//#1
+//#1 #2
+
 const userObj = {
 	firstName : 'Jack',
 	lastName : 'Franklin',
-	age : 30
+	age : 30,
+	fullName: function(){
+		return this.firstName + ' ' + this.lastName;
+	}
 };
 console.log(userObj);
-
-//#2
-// userObj.firstName = 'Jack';
-// userObj.lastName = 'Franklin';
-// userObj.fullName = userObj.firstName + ' ' + userObj.lastName;
-
-// console.log(userObj.fullName)
-
-let parent = {
-	greet: function(){
-		console.log(this.firstName + ' ' + this.lastName)
-	}
-}
-let fullName =  Object.create(parent);
-fullName.firstName = 'Jack';
-fullName.lastName = 'Franklin';
-
-fullName.greet()
+console.log(userObj.fullName());
 
 //#3
 function defUpperStr (str){
